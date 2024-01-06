@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Спланируйте новый бюджет"
+                        android:textAppearance="?android:attr/textAppearanceLarge"></TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/budget_name"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Название">
+
+                    </EditText>
+                    <EditText
+                        android:id="@+id/start_period"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Начало периода в формате dd.mm.yy">
+
+                    </EditText>
+                    <EditText
+                        android:id="@+id/end_period"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Конец периода в формате dd.mm.yy">
+                    </EditText>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Распределение бюджета по категориям"
+                    android:textAlignment="center"
+                    android:textAppearance="?android:attr/textAppearanceMedium"></TextView>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/et_category_name"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:hint="Название категории"></EditText>
+
+                        <Button
+                            android:id="@+id/add_category"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Добавить категорию"></Button>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="right"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/et_category_price"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:hint="Сумма"
+                            android:textAlignment="center"></EditText>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <ListView
+                    android:id="@+id/categories"
+                    android:layout_width="wrap_content"
+                    android:layout_height="264dp"></ListView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/save_budget"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Сохранить этот бюджет"
+                        android:textAppearance="?android:attr/textAppearanceLarge">
+
+                    </Button>
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+</LinearLayout>
